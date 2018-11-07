@@ -6,6 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/bm_93/ontologies/2018/9/untitled-ontology-6">
+    <Prefix name="" IRI="http://www.semanticweb.org/bm_93/ontologies/2018/9/untitled-ontology-6"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -15,10 +16,13 @@
         <Class IRI="#Actor"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Airborne"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Battle"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Country"/>
+        <Class IRI="#Car"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Economic_Crisis"/>
@@ -33,10 +37,22 @@
         <Class IRI="#Group"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Landfaring"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Legal_entity"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Manmade_object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nation_State"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Period"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Persistent_item"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Person"/>
@@ -45,31 +61,53 @@
         <Class IRI="#Physical_object"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Place"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Political_movement"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Ship"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Temporal_entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vehicle"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#War"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Waterfaring"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#Belligerent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Has_end_date"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#Has_start_date"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WW2"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="#Actor"/>
-        <Class IRI="#Entity"/>
+        <Class IRI="#Persistent_item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Airborne"/>
+        <Class IRI="#Vehicle"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Battle"/>
         <Class IRI="#Event"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Country"/>
-        <Class IRI="#Group"/>
+        <Class IRI="#Car"/>
+        <Class IRI="#Landfaring"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Economic_Crisis"/>
@@ -84,7 +122,27 @@
         <Class IRI="#Actor"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Landfaring"/>
+        <Class IRI="#Vehicle"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Legal_entity"/>
+        <Class IRI="#Persistent_item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Manmade_object"/>
+        <Class IRI="#Physical_object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nation_State"/>
+        <Class IRI="#Group"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Period"/>
+        <Class IRI="#Temporal_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Persistent_item"/>
         <Class IRI="#Entity"/>
     </SubClassOf>
     <SubClassOf>
@@ -93,6 +151,10 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Physical_object"/>
+        <Class IRI="#Persistent_item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Place"/>
         <Class IRI="#Entity"/>
     </SubClassOf>
     <SubClassOf>
@@ -101,16 +163,41 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Ship"/>
-        <Class IRI="#Physical_object"/>
+        <Class IRI="#Waterfaring"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Temporal_entity"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vehicle"/>
+        <Class IRI="#Manmade_object"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#War"/>
         <Class IRI="#Event"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Waterfaring"/>
+        <Class IRI="#Vehicle"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#War"/>
+        <NamedIndividual IRI="#WW2"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Has_end_date"/>
+        <NamedIndividual IRI="#WW2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp"></Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#Belligerent"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Has_end_date"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#Has_start_date"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
