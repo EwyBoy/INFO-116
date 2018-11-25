@@ -21,8 +21,14 @@
     <meta property = "og:image" content = "https://i.imgur.com/KulQDfw.png"/> <!--[Links to a picture of Titanic]><!-->
     <meta property = "og:description" content = "The New York musical production Titanic"/>
     <meta property = "og:locale" content = "en_GB"/>
+
+    <!-- TODO uncomment - had to remove to get linter validator to work
     <meta property = "og:locale:alternate" content = "en_US"/>
     <meta property = "og:locale:alternate" content = "en_AS"/>
+    -->
+
+    <!--JSON LD LOADER-->
+    <script type="application/ld+json"></script>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -838,14 +844,15 @@
         <span vocab="http://schema.org/" typeof="Article">
         <span property="headline">Floating Titanic sinking NY show</span>
             <span property="articleBody">
-                FOR once, the Titanic really was unsinkable. The New York musical production
-                "Titanic," based on the epic ocean liner disaster of 1912, had to cancel its preview this week because the
-                ship wouldn't sink. Last night's performance also was cancelled to work on what publicist Susanne Tighe
-                described as complex technical aspects. "They need more time to get the movement of the ship right,"
-                she said. Titanic's running into an iceberg and sinking, onstage, are among the intended special effects
-                of the multimillion-dollar production. Opening night is scheduled for April 23. Peter Stone and Maury Yeston,
-                the writer and composer, have described the theme of the show as the contrast between the rich passengers on
-                the upper decks and the poor below.
+                FOR once, the <span property="name">Titanic</span> really was unsinkable.
+                The <span property="City">New York</span> <span property="MusicEvent">musical</span> production"<span property="name">Titanic</span>,"
+                based on the epic ocean liner disaster of <span property="Date">1912</span>, had to cancel its preview this week because the ship wouldn't sink.
+                Last night's performance also was cancelled to work on what publicist <span property="name">Susanne Tighe</span>described as complex technical aspects.
+                "They need more time to get the movement of the ship right,"she said.
+                <span property="name">Titanic</span>'s running into an iceberg and sinking, onstage, are among the intended special effects of the multimillion-dollar production.
+                Opening night is scheduled for <span property="Date">April 23</span>. <span property="name">Peter Stone</span> and <span property="name">Maury Yeston</span>,
+                the <span property="jobTitle">writer</span> and <span property="jobTitle">composer</span>,
+                have described the theme of the show as the contrast between the rich passengers on the upper decks and the poor below.
             </span>
         </span>
     </textarea>
