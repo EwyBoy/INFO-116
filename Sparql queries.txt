@@ -1,5 +1,5 @@
 
-# What is the theme in the muscial Titanic #
+# What is the theme in the muscial Titanic? #
 
 SELECT ?theme
 	WHERE {
