@@ -850,19 +850,24 @@
             <span class="ui-icon ui-icon-closethick">close</span>
         </a>
     </div>
-    <textarea id="dialogOcr" class="ui-dialog-content ui-widget-content" style="display: inline-block; width: auto; min-height: 0px; height: 287.6px;" scrolltop="0" scrollleft="0">
-        <span vocab="http://schema.org/" typeof="Article">
-        <span property="headline">Floating Titanic sinking NY show</span>
-            <span property="articleBody">
-                FOR once, the <span property="name">Titanic</span> really was unsinkable.
-                The <span property="City">New York</span> <span property="MusicEvent">musical</span> production"<span property="name">Titanic</span>,"
-                based on the epic ocean liner disaster of <span property="Date">1912</span>, had to cancel its preview this week because the ship wouldn't sink.
-                Last night's performance also was cancelled to work on what publicist <span property="name">Susanne Tighe</span>described as complex technical aspects.
-                "They need more time to get the movement of the ship right,"she said.
-                <span property="name">Titanic</span>'s running into an iceberg and sinking, onstage, are among the intended special effects of the multimillion-dollar production.
-                Opening night is scheduled for <span property="Date">April 23</span>. <span property="name">Peter Stone</span> and <span property="name">Maury Yeston</span>,
-                the <span property="jobTitle">writer</span> and <span property="jobTitle">composer</span>,
-                have described the theme of the show as the contrast between the rich passengers on the upper decks and the poor below.
+    <textarea id="dialogOcr" class="ui-dialog-content ui-widget-content" style="display: inline-block; width: auto; min-height: 0px; height: 287.6px;" scrolltop="0" scrollleft="0"></textarea>
+        <span xmlns:ont="our_ontology.com/" xmlns:schema="http://schema.org/">
+            <span resource="#article" typeof="sch:Article">
+                <span property="schema:headline">Floating Titanic sinking NY show</span>
+                <span property="schema:articleBody">
+                    FOR once, the <span resource="#titanic" typeof="ont:Ship" property="ont:Name" content="Titanic">Titanic</span> really was unsinkable.
+                    The <span resource="#new_york" typeof="ont:Place" property="ont:Name" content="New York">New York</span> 
+                    musical production"<span resource="#titanic_musical" typeof="ont:Musical" property="ont:Name" content="Titanic">Titanic</span>,"
+                    based on the epic ocean liner disaster of <span resource="#titanic" property="ont:Sank" content="1912">1912</span>, had to cancel its preview this week because the ship wouldn't sink.
+                    Last night's performance also was cancelled to work on what publicist <span property="name">Susanne Tighe</span>described as complex technical aspects.
+                    "They need more time to get the movement of the ship right,"she said.
+                    Titanic's running into an iceberg and sinking, onstage, are among the intended special effects of the multimillion-dollar production.
+                    Opening night is scheduled for <span resource="#titanic_musical" property="ont:Opening_night" content="April 23">April 23</span>. 
+                    <span resource="#peter_stone" typeof="ont:person" property="ont:Name" content="Peter Stone">Peter Stone</span>
+                    and <span resource="#maury_yeston" typeof="ont:person" property="ont:Name" content="Maury Yeston">Maury Yeston</span>, 
+                    the <span resource="#peter_stone" property="ont:Writer" content="#titanic_musical">writer and <span resource="#maury_yeston" property="ont:composer" content="#titanic_musical">composer</span>,
+                    have described the theme of the show as <span resource="#titanic_musical" property="ont:Theme" content="the contrast between the rich passengers on the upper decks and the poor below.">the contrast between the rich passengers on the upper decks and the poor below.</span>
+                </span>
             </span>
         </span>
     </textarea>

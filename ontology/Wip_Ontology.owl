@@ -46,9 +46,6 @@
         <Class IRI="#Event"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Flight_Tech"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Flight_tech"/>
     </Declaration>
     <Declaration>
@@ -139,6 +136,9 @@
         <ObjectProperty IRI="#Belligerent"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#Composer"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#During"/>
     </Declaration>
     <Declaration>
@@ -163,6 +163,9 @@
         <ObjectProperty IRI="#Target"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#Writer"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#Goal"/>
     </Declaration>
     <Declaration>
@@ -173,6 +176,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#Name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Sank"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#Theme"/>
@@ -218,10 +224,6 @@
         <Class IRI="#Temporal_entity"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Flight_Tech"/>
-        <Class IRI="#Technological_Achievement"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Flight_tech"/>
         <Class IRI="#Technological_Achievement"/>
     </SubClassOf>
@@ -342,6 +344,10 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Composer"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#During"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -369,6 +375,10 @@
         <ObjectProperty IRI="#Target"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Writer"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="#Performed"/>
         <ObjectProperty IRI="#Performed_By"/>
@@ -380,6 +390,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Belligerent"/>
         <Class IRI="#Group"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Composer"/>
+        <Class IRI="#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#During"/>
@@ -413,6 +427,14 @@
         <ObjectProperty IRI="#Target"/>
         <Class IRI="#Action"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Writer"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#Author"/>
         <Class IRI="#Group"/>
@@ -420,6 +442,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#Author"/>
         <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Composer"/>
+        <Class IRI="#Creative_work"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#During"/>
@@ -457,6 +483,14 @@
         <ObjectProperty IRI="#Target"/>
         <Class IRI="#Persistent_item"/>
     </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Writer"/>
+        <Class IRI="#Creative_work"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <Class IRI="#Creative_work"/>
+    </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="#Goal"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
@@ -471,6 +505,10 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#Name"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Sank"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -492,6 +530,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#Name"/>
         <Class IRI="#Entity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Sank"/>
+        <Class IRI="#Waterfaring"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#Theme"/>
@@ -518,6 +560,10 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#Sank"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#Theme"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -539,6 +585,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Belligerent</IRI>
         <Literal>Participants in the specified Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Composer</IRI>
+        <Literal>Relates a Person to a Creative Work he/she composed music for</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -609,6 +660,12 @@ Wikipedia on Disaster</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sank</IRI>
+        <Literal>If a Waterfaring vessel has sunk, this property contains the date of the sinking.
+Format is string to allow for incomplete or variable date format.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Space_tech</IRI>
         <Literal>Achievement relating to technology intended to traverse/explore space outside of earths atmosphere</Literal>
     </AnnotationAssertion>
@@ -639,8 +696,18 @@ Wikipedia on Disaster</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Writer</IRI>
+        <Literal>Relates a Person to a Creative Work he/she wrote or helped write text for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>owl:topDataProperty</AbbreviatedIRI>
         <Literal>Short description of a goal of an Actor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>owl:topObjectProperty</AbbreviatedIRI>
+        <Literal>Relates a Person to a Creative work he/her wrote or helped write text for</Literal>
     </AnnotationAssertion>
 </Ontology>
 
