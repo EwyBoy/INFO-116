@@ -1,0 +1,40 @@
+Hva er tema I Floating Titanic
+SELECT ?tema
+	WHERE { ?Musical owl:Theme ?tema .
+			?Musical owl:Name "Titanic" .
+			}
+
+
+Når sank titanic
+SELECT ?date
+	WHERE { ?Ship owl:Sank ?date .
+			?Ship owl:Name "Titanic" .
+			}
+
+
+deltakere i civil rights movement
+SELECT ?name
+	WHERE { ?actor  owl:Member_of  ?movement .
+      		?actor owl:Name ?name . 
+     		?movement owl:Name "Civil Rights Movement"
+     		}
+
+
+Menneskeskapte katastrofer i Europa mellom 1900-tallet til 2000-tallet
+SELECT ?name
+	WHERE { ?mm_disaster rdf:type owl:Manmade_disaster .
+			?mm_disaster owl:place "Europe" .
+			?mm_disaster owl:year ?year . 
+			?mm_disaster owl:Name ?name .
+FILTER(?year < 2000 && ?year > 1900)
+}
+
+Hvor ble atombomben brukt
+SELECT ?name
+	WHERE { ?bombing owl:weapon "Nuclear Bomb" .
+        	?bombing owl:Target ?place  .
+        	?place owl:name ?name
+            }
+		
+			
+	
