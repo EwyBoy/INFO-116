@@ -13,16 +13,28 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
+        <Class IRI="#Action"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Actor"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Airborne"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Battle"/>
+        <Class IRI="#Assassination"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bombing"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Car"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Creative_work"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disaster"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Economic_Crisis"/>
@@ -34,6 +46,15 @@
         <Class IRI="#Event"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Flight_Tech"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Flight_tech"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Genocide"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Group"/>
     </Declaration>
     <Declaration>
@@ -43,13 +64,25 @@
         <Class IRI="#Legal_entity"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Manmade_disaster"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Manmade_object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Musical"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Nation_State"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Period"/>
+        <Class IRI="#Natural_disaster"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Performance"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Persistent_item"/>
@@ -58,22 +91,40 @@
         <Class IRI="#Person"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Physical_object"/>
+        <Class IRI="#Place"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Place"/>
+        <Class IRI="#Political_event"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Political_movement"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Right"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Ship"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sinking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Space_tech"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Technological_Achievement"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Temporal_entity"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Transport_accident"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Vehicle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Violent_Action"/>
     </Declaration>
     <Declaration>
         <Class IRI="#War"/>
@@ -82,7 +133,37 @@
         <Class IRI="#Waterfaring"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#Author"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#Belligerent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#During"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Goal"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Name"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Participant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Performed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Performed_By"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Result"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Target"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Goal"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#Has_end_date"/>
@@ -91,8 +172,15 @@
         <DataProperty IRI="#Has_start_date"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#WW2"/>
+        <DataProperty IRI="#Name"/>
     </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Theme"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Action"/>
+        <Class IRI="#Temporal_entity"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#Actor"/>
         <Class IRI="#Persistent_item"/>
@@ -102,20 +190,44 @@
         <Class IRI="#Vehicle"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Battle"/>
-        <Class IRI="#Event"/>
+        <Class IRI="#Assassination"/>
+        <Class IRI="#Violent_Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bombing"/>
+        <Class IRI="#Violent_Action"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Car"/>
         <Class IRI="#Landfaring"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Economic_Crisis"/>
+        <Class IRI="#Creative_work"/>
+        <Class IRI="#Manmade_object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Disaster"/>
         <Class IRI="#Event"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Economic_Crisis"/>
+        <Class IRI="#Manmade_disaster"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Event"/>
-        <Class IRI="#Period"/>
+        <Class IRI="#Temporal_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Flight_Tech"/>
+        <Class IRI="#Technological_Achievement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Flight_tech"/>
+        <Class IRI="#Technological_Achievement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Genocide"/>
+        <Class IRI="#Manmade_disaster"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Group"/>
@@ -130,16 +242,32 @@
         <Class IRI="#Persistent_item"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Manmade_disaster"/>
+        <Class IRI="#Disaster"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Manmade_object"/>
-        <Class IRI="#Physical_object"/>
+        <Class IRI="#Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Musical"/>
+        <Class IRI="#Performance"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Nation_State"/>
         <Class IRI="#Group"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Period"/>
-        <Class IRI="#Temporal_entity"/>
+        <Class IRI="#Natural_disaster"/>
+        <Class IRI="#Disaster"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Object"/>
+        <Class IRI="#Persistent_item"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Performance"/>
+        <Class IRI="#Creative_work"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Persistent_item"/>
@@ -150,50 +278,189 @@
         <Class IRI="#Actor"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Physical_object"/>
-        <Class IRI="#Persistent_item"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Place"/>
         <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Political_event"/>
+        <Class IRI="#Event"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Political_movement"/>
         <Class IRI="#Group"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Right"/>
+        <Class IRI="#Legal_entity"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Ship"/>
         <Class IRI="#Waterfaring"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sinking"/>
+        <Class IRI="#Transport_accident"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Space_tech"/>
+        <Class IRI="#Technological_Achievement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Technological_Achievement"/>
+        <Class IRI="#Event"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Temporal_entity"/>
         <Class IRI="#Entity"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Transport_accident"/>
+        <Class IRI="#Manmade_disaster"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Vehicle"/>
         <Class IRI="#Manmade_object"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Violent_Action"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#War"/>
-        <Class IRI="#Event"/>
+        <Class IRI="#Manmade_disaster"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Waterfaring"/>
         <Class IRI="#Vehicle"/>
     </SubClassOf>
-    <ClassAssertion>
-        <Class IRI="#War"/>
-        <NamedIndividual IRI="#WW2"/>
-    </ClassAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#Has_end_date"/>
-        <NamedIndividual IRI="#WW2"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTimeStamp"></Literal>
-    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Author"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#Belligerent"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#During"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Goal"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Participant"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Performed"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Performed_By"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Result"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Target"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#Performed"/>
+        <ObjectProperty IRI="#Performed_By"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Author"/>
+        <Class IRI="#Creative_work"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Belligerent"/>
+        <Class IRI="#Group"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#During"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Goal"/>
+        <Class IRI="#Political_movement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Participant"/>
+        <Class IRI="#Actor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Performed"/>
+        <Class IRI="#Actor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Performed_By"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Result"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Result"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Target"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Author"/>
+        <Class IRI="#Group"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Author"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#During"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Goal"/>
+        <Class IRI="#Right"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Participant"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Participant"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Performed"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Performed_By"/>
+        <Class IRI="#Actor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Result"/>
+        <Class IRI="#Persistent_item"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Result"/>
+        <Class IRI="#Temporal_entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Target"/>
+        <Class IRI="#Persistent_item"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Goal"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#Has_end_date"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
@@ -202,11 +469,93 @@
         <DataProperty IRI="#Has_start_date"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Name"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Theme"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Goal"/>
+        <Class IRI="#Actor"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Has_end_date"/>
+        <Class IRI="#Temporal_entity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Has_start_date"/>
+        <Class IRI="#Temporal_entity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Name"/>
+        <Class IRI="#Entity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Theme"/>
+        <Class IRI="#Creative_work"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <Class IRI="#Actor"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Goal"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Has_end_date"/>
+        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Has_start_date"/>
+        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Theme"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Action</IRI>
+        <Literal>An action performed by an Actor often to achieve a specific goal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Author</IRI>
+        <Literal>The creator/creators of a Creative work</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Belligerent</IRI>
-        <Literal>Refers to participants in wars.
-Example: Great Britain was a belligerent in WW2</Literal>
+        <Literal>Participants in the specified Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Disaster</IRI>
+        <Literal>&quot;A disaster is a serious disruption, occurring over a relatively short time, of the functioning of a community or a society involving widespread human, material, economic or environmental loss and impacts, which exceeds the ability of the affected community or society to cope using its own resources.&quot;
+
+Wikipedia on Disaster</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#During</IRI>
+        <Literal>Relates an action to an overarching Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Entity</IRI>
+        <Literal>Any identifiable thing</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -215,13 +564,83 @@ Example: Great Britain was a belligerent in WW2</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Flight_tech</IRI>
+        <Literal>Technologic achievement relating to flying in the earths atmosphere</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Goal</IRI>
+        <Literal>Description of a goal of an Actor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Has_start_date</IRI>
         <Literal>Refers to the starting date of an event in time</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Period</IRI>
-        <Literal>A period of time of larger scale than event</Literal>
+        <IRI>#Musical</IRI>
+        <Literal>A Theatrical performance with an emphasis on song and music</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Name</IRI>
+        <Literal>The name of an Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Participant</IRI>
+        <Literal>Refers to participating Actors in a an Action or Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Performed</IRI>
+        <Literal>Relates an Actor to an Action it has performed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Performed_By</IRI>
+        <Literal>relates an Action to the Actor who performed it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Result</IRI>
+        <Literal>a resulting consequence of an Event or Action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Space_tech</IRI>
+        <Literal>Achievement relating to technology intended to traverse/explore space outside of earths atmosphere</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Target</IRI>
+        <Literal>Intended target of an Action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Technological_Achievement</IRI>
+        <Literal>An instance of a Technology Proving new capabilities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Temporal_entity</IRI>
+        <Literal>A happening with an approximate beginning and end in time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Theme</IRI>
+        <Literal>Description of the overall theme of a Creative Work</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Violent_Action</IRI>
+        <Literal>An action intended to cause physical harm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>owl:topDataProperty</AbbreviatedIRI>
+        <Literal>Short description of a goal of an Actor</Literal>
     </AnnotationAssertion>
 </Ontology>
 
