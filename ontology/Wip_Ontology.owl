@@ -133,9 +133,6 @@
         <ObjectProperty IRI="#Author"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#Belligerent"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#Composer"/>
     </Declaration>
     <Declaration>
@@ -143,6 +140,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#Goal"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Location"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#Member_of"/>
@@ -154,10 +154,7 @@
         <ObjectProperty IRI="#Participant"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#Performed"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#Performed_By"/>
+        <ObjectProperty IRI="#Performed_in"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#Performer"/>
@@ -166,7 +163,13 @@
         <ObjectProperty IRI="#Result"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#Taken_by"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#Target"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Took_action"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#Writer"/>
@@ -194,6 +197,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#Weapon"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Year"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Action"/>
@@ -352,10 +358,6 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#Belligerent"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#Composer"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -368,6 +370,10 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Location"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#Member_of"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -376,11 +382,7 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#Performed"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#Performed_By"/>
+        <ObjectProperty IRI="#Performed_in"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -392,7 +394,15 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Taken_by"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#Target"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Took_action"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -400,16 +410,16 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#Performed"/>
-        <ObjectProperty IRI="#Performed_By"/>
+        <ObjectProperty IRI="#Performed_in"/>
+        <ObjectProperty IRI="#Performer"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#Taken_by"/>
+        <ObjectProperty IRI="#Took_action"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Author"/>
         <Class IRI="#Creative_work"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#Belligerent"/>
-        <Class IRI="#Group"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Composer"/>
@@ -424,6 +434,14 @@
         <Class IRI="#Political_movement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Location"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Location"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#Member_of"/>
         <Class IRI="#Person"/>
     </ObjectPropertyDomain>
@@ -432,12 +450,8 @@
         <Class IRI="#Actor"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#Performed"/>
-        <Class IRI="#Actor"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#Performed_By"/>
-        <Class IRI="#Action"/>
+        <ObjectProperty IRI="#Performed_in"/>
+        <Class IRI="#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Performer"/>
@@ -452,15 +466,19 @@
         <Class IRI="#Event"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Taken_by"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#Target"/>
         <Class IRI="#Action"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#Writer"/>
-        <Class IRI="#Person"/>
+        <ObjectProperty IRI="#Took_action"/>
+        <Class IRI="#Actor"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty IRI="#Writer"/>
         <Class IRI="#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
@@ -484,6 +502,10 @@
         <Class IRI="#Right"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#Location"/>
+        <Class IRI="#Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#Member_of"/>
         <Class IRI="#Group"/>
     </ObjectPropertyRange>
@@ -496,12 +518,8 @@
         <Class IRI="#Event"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#Performed"/>
-        <Class IRI="#Action"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#Performed_By"/>
-        <Class IRI="#Actor"/>
+        <ObjectProperty IRI="#Performed_in"/>
+        <Class IRI="#Performance"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#Performer"/>
@@ -516,15 +534,19 @@
         <Class IRI="#Temporal_entity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#Taken_by"/>
+        <Class IRI="#Actor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#Target"/>
         <Class IRI="#Persistent_item"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#Writer"/>
-        <Class IRI="#Creative_work"/>
+        <ObjectProperty IRI="#Took_action"/>
+        <Class IRI="#Action"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty IRI="#Writer"/>
         <Class IRI="#Creative_work"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
@@ -557,6 +579,10 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#Weapon"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Year"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
@@ -591,6 +617,10 @@
         <DataProperty IRI="#Weapon"/>
         <Class IRI="#Violent_Action"/>
     </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Year"/>
+        <Class IRI="#Temporal_entity"/>
+    </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="#Date"/>
         <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
@@ -623,6 +653,10 @@
         <DataProperty IRI="#Weapon"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Year"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Action</IRI>
@@ -630,13 +664,13 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Author</IRI>
-        <Literal>The creator/creators of a Creative work</Literal>
+        <IRI>#Actor</IRI>
+        <Literal>Any entity that can be said to act upon the world</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Belligerent</IRI>
-        <Literal>Participants in the specified Event</Literal>
+        <IRI>#Author</IRI>
+        <Literal>The creator/creators of a Creative work</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -682,8 +716,18 @@ Wikipedia on Disaster</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Group</IRI>
+        <Literal>A Grouping of people with a similar goal or otherwise cooperating over an extended period</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Has_start_date</IRI>
         <Literal>Refers to the starting date of an event in time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Location</IRI>
+        <Literal>Relates an Action or Event to a Place where some of or all of the Action/Event took place</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -703,22 +747,27 @@ Wikipedia on Disaster</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Participant</IRI>
-        <Literal>Refers to participating Actors in a an Action or Event</Literal>
+        <Literal>Refers to a participating Actor in an Action or Event</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Performed</IRI>
-        <Literal>Relates an Actor to an Action it has performed</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Performed_By</IRI>
-        <Literal>relates an Action to the Actor who performed it.</Literal>
+        <IRI>#Performed_in</IRI>
+        <Literal>relates a Person to a Performance he/she performed in</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Performer</IRI>
-        <Literal>Defines a Person that participated in this Performance as a performer</Literal>
+        <Literal>relates a Performance to a Person who performed in it</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Persistent_item</IRI>
+        <Literal>An identifiable object, concept or idea</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Place</IRI>
+        <Literal>A Geographicaly defined place</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -733,8 +782,18 @@ Format is string to allow for incomplete or variable date format.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Ship</IRI>
+        <Literal>Relatively large vessel travelling on water</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Space_tech</IRI>
         <Literal>Achievement relating to technology intended to traverse/explore space outside of earths atmosphere</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Taken_by</IRI>
+        <Literal>Relates an Action to the Actor who took that action.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -758,8 +817,23 @@ Format is string to allow for incomplete or variable date format.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Took_action</IRI>
+        <Literal>Relates an Actor to an Action it took</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Vehicle</IRI>
+        <Literal>Any mechanical construct designed to travel, with or without cargo.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Violent_Action</IRI>
         <Literal>An action intended to cause physical harm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Waterfaring</IRI>
+        <Literal>Any vehicle constructed to travel on or through water</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -770,6 +844,11 @@ Format is string to allow for incomplete or variable date format.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Writer</IRI>
         <Literal>Relates a Person to a Creative Work he/she wrote or helped write text for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Year</IRI>
+        <Literal>The year a thing happened in</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
