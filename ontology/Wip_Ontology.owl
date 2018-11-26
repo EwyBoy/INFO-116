@@ -145,6 +145,9 @@
         <ObjectProperty IRI="#Goal"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#Member_of"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#Name"/>
     </Declaration>
     <Declaration>
@@ -356,6 +359,10 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Member_of"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#Participant"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -402,6 +409,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Goal"/>
         <Class IRI="#Political_movement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Member_of"/>
+        <Class IRI="#Person"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Participant"/>
@@ -454,6 +465,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#Goal"/>
         <Class IRI="#Right"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Member_of"/>
+        <Class IRI="#Group"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#Participant"/>
@@ -627,6 +642,11 @@ Wikipedia on Disaster</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Has_start_date</IRI>
         <Literal>Refers to the starting date of an event in time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Member_of</IRI>
+        <Literal>Relates a Person to a Group he/she is a member of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
