@@ -160,6 +160,9 @@
         <ObjectProperty IRI="#Performed_By"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#Performer"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#Result"/>
     </Declaration>
     <Declaration>
@@ -167,6 +170,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#Writer"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Date"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#Goal"/>
@@ -185,6 +191,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#Theme"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Weapon"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Action"/>
@@ -375,6 +384,10 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Performer"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#Result"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -425,6 +438,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Performed_By"/>
         <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Performer"/>
+        <Class IRI="#Performance"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#Result"/>
@@ -487,6 +504,10 @@
         <Class IRI="#Actor"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#Performer"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#Result"/>
         <Class IRI="#Persistent_item"/>
     </ObjectPropertyRange>
@@ -506,6 +527,10 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
         <Class IRI="#Creative_work"/>
     </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Date"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#Goal"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
@@ -530,6 +555,14 @@
         <DataProperty IRI="#Theme"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Weapon"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Date"/>
+        <Class IRI="#Temporal_entity"/>
+    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#Goal"/>
         <Class IRI="#Actor"/>
@@ -555,9 +588,13 @@
         <Class IRI="#Creative_work"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-        <Class IRI="#Actor"/>
+        <DataProperty IRI="#Weapon"/>
+        <Class IRI="#Violent_Action"/>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Date"/>
+        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#Goal"/>
         <Datatype abbreviatedIRI="xsd:string"/>
@@ -583,7 +620,7 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <DataProperty IRI="#Weapon"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <AnnotationAssertion>
@@ -605,6 +642,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Composer</IRI>
         <Literal>Relates a Person to a Creative Work he/she composed music for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Date</IRI>
+        <Literal>Describes a specific point in time as opposed to a start date and end date where this is more practical.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -675,6 +717,11 @@ Wikipedia on Disaster</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Performer</IRI>
+        <Literal>Defines a Person that participated in this Performance as a performer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Result</IRI>
         <Literal>a resulting consequence of an Event or Action</Literal>
     </AnnotationAssertion>
@@ -713,6 +760,11 @@ Format is string to allow for incomplete or variable date format.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Violent_Action</IRI>
         <Literal>An action intended to cause physical harm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Weapon</IRI>
+        <Literal>Defines a weapon used in a Violent Action</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
